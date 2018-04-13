@@ -33,6 +33,18 @@ function missingError(searchWord) {
 }
 
 function showWikiResults(data) {
-  console.log(typeof data.query.search);
-
+  console.log(data.query.search);
+  $( ".displayResults" ).empty();
+  for (var i = 0; i < 10; i++) {
+    var url = "https://en.wikipedia.org/?curid=" + data.query.search[i].pageid;
+		$(".displayResults").append("<a href='" + url + "'>" + "<div class='result-list result-" + i + "'>" + "<span class='result-title title-" + i + "'></span>" + "<span class='result-snippet snippet-" + i + "'></span>" + "</div>" + "</a>" );
+  }
+  
+  for (var j = 0; j < 10; j++) {
+		var title = data.query.search[j].title;
+		var snippet = data.query.search[j].snippet;
+		$(".title-" + j).html("<h3>" + title + "</h3>");
+		$(".snippet-" + j).html(snippet);
+	}
 }
+

@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Wikipedia Search</title>
+  <link href="https://fonts.googleapis.com/css?family=Ledger" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
   <div class="pageContainer">
-    <div>
-      <h1>FreeCodeCamp Wikipedia Veiwer Challenge</h1>
+    <div class="header">
+      <a href="https://en.wikipedia.org/wiki/Main_Page" target="_blank"><img src="wikipedia-logo.png" id="image" width="50px" height="50px" alt="Wikipedia icon image"></a>
+      <h1 id="title">Wikipedia Search Tool</h1>
     </div>
-    <div><button id="wiki" class="randomWiki">Random Wiki Page</button></div>
-    <div>
+
+    <div class="searchTools">
       <form action="" method="get">
-        <textarea name="wikiInput" id="wiki-input" cols="40" rows="1" placeholder="Enter your 'Search' phrase here"></textarea>
-        <button type="submit" id="submitButton">Search</button>>
+        <textarea name="wikiInput" id="wiki-input" wrap="off" cols="40" rows="3" placeholder="Enter your 'Search' phrase here"></textarea>
+        <button type="submit" id="submitButton" class="btn-1">Search</button>
+        <button id="wiki" class="randomWiki btn-2">Random Page</button>
       </form>
-    </div>
-    <div>
-      
-      <h2 id="heading">Search Result Heading</h2>
-      <p id="snippet">Snippet Text goes here</p>
-    </div>
-  </div>
+    </div> <!-- end of searchTools div -->
+    
+    <div class="displayResults">
+      <ul id="results">
+    </div> <!-- end of displayResults Div -->
+
+  </div> <!-- end of page container -->
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="app.js"></script>
 
 </body>
+
 </html>
