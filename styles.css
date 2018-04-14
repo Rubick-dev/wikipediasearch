@@ -1,14 +1,23 @@
+html {
+  height: 100%;
+}
+
 body {
   background: linear-gradient(217deg, #3d3d3d, #6c6d77 70.71%),
             linear-gradient(127deg, rgba(64, 73, 64, 0.8), rgba(220, 233, 220, 0) 70.71%),
             linear-gradient(336deg, rgba(14, 14, 17, 0.8), rgba(228, 228, 231, 0) 70.71%);
   max-width: 1200px;
-  height: 900px;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .pageContainer {
   justify-content: center;
   max-width: 100%;
+  width: 1000px;
+  margin: 0 auto; 
 }
 
 /* Heading formating and positioning */
@@ -149,3 +158,35 @@ h3 {
   background: #37375c;
 }
 
+@media screen and (max-width: 525px) {
+  #title {
+    font-size: 1rem;
+    margin-left: 2px;
+    vertical-align: bottom;
+  }
+
+  #image {
+    height: 30px;
+    width: 30px;
+  }
+
+  .searchTools {
+    margin-left: 10px;
+  }
+
+  #wiki-input {
+    margin-bottom: 10px;
+  }
+  #submitButton {
+    margin-left: 2px;
+    margin-bottom: 10px;
+  }
+  #wiki {
+    margin-left: 2px;
+  }
+
+  .header {
+    margin-left: 2px;
+    margin-bottom: 10px;
+  }
+}
